@@ -1,5 +1,8 @@
 function pet-select
   set -l query (commandline)
-  pet search --query "$query" $argv | read cmd
-  commandline $cmd
+  set -l cmd (pet search --query "$query" $argv)
+  if test -n "$cmd"
+    commandline $cmd
+  end
+  commandline --function repaint
 end
