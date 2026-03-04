@@ -1,35 +1,40 @@
-fish-pet
-====
+# fish-pet
 
-Fish support of the zsh script introduced in [knqyf263/pet](https://github.com/knqyf263/pet).
+[Fish](https://fishshell.com) plugin for [knqyf263/pet](https://github.com/knqyf263/pet) — a CLI snippet manager.
 
-If you use fisher or oh-my-fish, install with the following command.
+## Requirements
 
-fisher
+[`pet`](https://github.com/knqyf263/pet) must be installed separately.
 
+## Installation
+
+**fisher**
 ```sh
-$ fisher install cest-la-v/fish-pet
+fisher install cest-la-v/fish-pet
 ```
 
-oh-my-fish
-
+**oh-my-fish**
 ```sh
-$ omf install https://github.com/cest-la-v/fish-pet
+omf install https://github.com/cest-la-v/fish-pet
 ```
 
+## Usage
+
+### `pet-prev`
+
+Saves the previous command as a new pet snippet.
+
+```sh
 pet-prev
-----
-
-You can easily register the previous command.
-
-pet-select
-----
-
-Please bind pet-select to your favorite key.
-
-If you'd like to bind CTRL+S
-
 ```
+
+### `pet-select`
+
+Searches pet snippets and pastes the selection into the command line. Bind it to a key for quick access.
+
+Add to `~/.config/fish/functions/fish_user_key_bindings.fish`:
+
+```fish
 function fish_user_key_bindings
   bind \cs 'pet-select --layout=bottom-up'
 end
