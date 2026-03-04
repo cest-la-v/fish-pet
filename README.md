@@ -5,14 +5,19 @@ Fish support of the zsh script introduced in [knqyf263/pet](https://github.com/k
 
 If you use fisher or oh-my-fish, install with the following command.
 
+fisher
+
 ```sh
-$ fisher otms61/fish-pet
-```
-```sh
-$ omf install https://github.com/otms61/fish-pet
+$ fisher install cest-la-v/fish-pet
 ```
 
-prev
+oh-my-fish
+
+```sh
+$ omf install https://github.com/cest-la-v/fish-pet
+```
+
+pet-prev
 ----
 
 You can easily register the previous command.
